@@ -1,0 +1,185 @@
+/* Global Components */
+
+html, body, #main-container, #App {
+  height: 100%;
+}
+
+
+/* Bootstrap */
+.form-group {
+  margin-bottom: 7px;
+}
+
+.short-form {
+  width: 5em;
+}
+
+.btn {
+  padding: 5px 20px;
+}
+
+.close-icon {
+  font-size: 1.6em;
+  margin: 0 1em;
+  position: relative;
+  top: 0.1em;
+}
+
+/* App */
+#App {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SiteHeader */
+#SiteHeader {
+  flex-grow: 0;
+}
+
+.header {
+  height: 4em;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+
+.header-logo {
+  display: inline-block;
+  margin: 0.5em 0;
+}
+
+.header-logo img {
+  height: 3em;
+}
+
+/* SiteMain */
+#SiteMain {
+  margin: 0.2em 1em;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* WorkoutHeader */
+#WorkoutHeader {
+  flex-grow: 0;
+}
+
+/* WorkoutBoard */
+#WorkoutBoard {
+  flex-grow: 1;
+  position: relative;
+}
+
+
+.board-canvas {
+  
+}
+
+.board {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+}
+
+/* WorkoutList */
+
+
+
+/* Workout */
+#Workout {
+  background-color: #e5e5e5;
+  width: 20em;
+  padding: 0.5em 0.5em;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.3em;
+  vertical-align: top;
+}
+
+#WorkoutTitle h5 {
+  margin-top: 3px;
+}
+
+/* Exercise */
+.exercise-container {
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 6px 6px 1px 6px;
+  margin-bottom: 0.5em;
+  transition: 0.3s;
+}
+
+.exercise-container:hover {
+  background-color: #c5c5c5;
+}
+
+.exercise-details {
+  display: block;
+  color: #333;
+  
+}
+
+.exercise-details:hover,
+.exercise-details:focus {
+  text-decoration: none;
+  color: #333;
+}
+
+/* AddExercise */
+.add-exercise {
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0.5em;
+  border-radius: 3px;
+}
+
+.add-exercise:hover {
+  background-color: #c5c5c5;
+}
+
+.add-exercise-form {
+
+}
+
+/* AddWorkout */
+#AddWorkout {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 0.3em;
+  width: 20em;
+}
+
+.add-workout {
+  display: block;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  width: 20em;
+}
+
+.add-workout:hover {
+  background-color: #c5c5c5;
+}
+
+.add-workout-form {
+  padding: 0.5em 0.5em;
+  transition: 0.3s;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+}
+
+.add-workout-form:hover {
+  background-color: #c5c5c5;
+}
+
+
