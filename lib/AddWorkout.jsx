@@ -16,6 +16,8 @@ export default class AddWorkout extends Component {
     this.state = {
       showForm: false,
     };
+    this.handleTextClick = this.handleTextClick.bind(this);
+    this.handleFormClick = this.handleFormClick.bind(this);
   }
 
   handleTextClick = () => {

@@ -64,6 +64,20 @@ html, body, #main-container, #App {
   flex-grow: 0;
 }
 
+#WorkoutHeader h4 {
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0.5em;
+  border-radius: 3px;
+}
+
+#WorkoutHeader h4:hover {
+  background-color: #c5c5c5;
+}
+
+
+
 /* WorkoutBoard */
 #WorkoutBoard {
   flex-grow: 1;
@@ -181,5 +195,73 @@ html, body, #main-container, #App {
 .add-workout-form:hover {
   background-color: #c5c5c5;
 }
+
+/* Change workout header */
+.workout-header-form {
+  display: inline-block;
+  padding: 0.3em 0.5em;
+  margin: 0.5em 0;
+  transition: 0.3s;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+}
+
+.workout-header-form:hover {
+  background-color: #c5c5c5;
+}
+
+.workout-header-form .btn {
+  margin-left: 1em;
+  padding: 0px 10px;
+  height: 2.5em;
+}
+
+.workout-header-form .close-icon {
+  margin: 0 0.5em;
+}
+
+.form-wrapper {
+  display: flex;
+  padding: 0;
+}
+
+.workout-header-form .form-group {
+  margin-bottom: 0;
+}
+
+.workout-title-form {
+  display: inline-block;
+  transition: 0.3s;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+}
+
+.workout-title-form .btn {
+  margin-left: 1em;
+  padding: 0px 10px;
+}
+
+.workout-title-form .close-icon {
+  margin: 0 0.5em;
+}
+
+.form-wrapper {
+  display: flex;
+  padding: 0;
+}
+
+.workout-title-form .form-group {
+  margin-bottom: 0;
+}
+
+
+
+
+
+
+
+
+
+
 
 
