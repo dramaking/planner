@@ -45,7 +45,8 @@ export default class WorkoutTitle extends Component {
     } else {
       content = <WorkoutTitleForm onClick={this.handleFormClick} 
                                   onSubmit={onSubmit}
-                                  index={this.props.index} />;
+                                  index={this.props.index}
+                                  title={this.props.title} />;
     }
 
     return (

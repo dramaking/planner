@@ -7,7 +7,10 @@ export default class ExerciseList extends Component {
     const exerciseList = this.props.exerciseList;
 
     const listItems = exerciseList.map((exercise) => 
-      <Exercise key={exercise.id} title={exercise.title} set={exercise.set} />
+      <Exercise key={exercise.id} 
+                title={exercise.title} 
+                set={exercise.set}
+                index={exercise.id} />
     );
 
     return (

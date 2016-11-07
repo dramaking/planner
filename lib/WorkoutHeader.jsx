@@ -15,7 +15,7 @@ export default class WorkoutHeader extends Component {
     super(props);
     this.state = {
       showForm: false,
-      title: 'Zicheng\'s Workout Plan',
+      title: 'Click to name your workout plan',
     };
     this.handleTextClick = this.handleTextClick.bind(this);
     this.handleFormClick = this.handleFormClick.bind(this);

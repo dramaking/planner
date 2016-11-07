@@ -32,7 +32,7 @@ export default class WorkoutHeaderForm extends Component {
           <div className="form-group">
             <input type="text" 
                    className="form-control" 
-                   placeholder="workout title"
+                   placeholder="Board title"
                    value={this.state.item}
                    onChange={this.handleTitleChange} />
           </div>

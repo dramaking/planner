@@ -137,13 +137,30 @@ html, body, #main-container, #App {
 .exercise-details {
   display: block;
   color: #333;
-  
+  cursor: pointer;
 }
 
 .exercise-details:hover,
 .exercise-details:focus {
   text-decoration: none;
   color: #333;
+}
+
+.modal p {
+  white-space: normal;
+}
+
+.modal-note-title {
+  
+}
+
+.edit-note {
+  margin-left: 1em;
+}
+
+.small-title {
+  font-weight: 700;
+  font-size: 1.1em;
 }
 
 /* AddExercise */
@@ -190,6 +207,7 @@ html, body, #main-container, #App {
   transition: 0.3s;
   border-radius: 3px;
   background-color: #e5e5e5;
+  width: 20em;
 }
 
 .add-workout-form:hover {
@@ -253,6 +271,93 @@ html, body, #main-container, #App {
 .workout-title-form .form-group {
   margin-bottom: 0;
 }
+
+/* AddSet */
+.add-set-text {
+  display: block;
+  padding: 0.5em 0.5em;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  margin-top: 1em;
+  margin-left: -0.5em;
+}
+
+.input-wrapper {
+  padding: 0;
+}
+
+.set-input {
+  padding: 0;
+  text-align: center;
+}
+
+#AddSetForm {
+  padding: 0.7em 0;
+  transition: 0.3s;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  margin-top: 1em;
+}
+
+#AddSetForm:hover {
+  background-color: #c5c5c5;
+}
+
+.set-add {
+  margin-top: 1em;
+}
+
+.time-symbol {
+  padding-top: 0.4em;
+}
+
+/* ExerciseNotes */
+.editing {
+  word-break: break-word;
+}
+
+.note-edit {
+  cursor: pointer;
+}
+
+/* SetItem */
+.set-space {
+  margin: 0.5em 0.1em;
+  padding: 0.2em 0;
+}
+
+.setItem {
+  transition: 0.3s;
+  border-radius: 3px;
+}
+
+.setItem:hover {
+  background-color: #e5e5e5;
+  cursor: pointer;
+}
+
+/* EditSetItemForm */
+#EditSetItemForm {
+  padding: 0.7em 0;
+  transition: 0.3s;
+  border-radius: 3px;
+  background-color: #e5e5e5;
+  margin-top: 1em;
+}
+
+#EditSetItemForm:hover {
+  background-color: #c5c5c5;
+}
+
+.trash-button {
+  margin-left: 1em;
+  padding: 5px 10px;
+}
+
+
+
 
 
 
