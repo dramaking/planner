@@ -4,16 +4,17 @@ import InlineEdit from 'react-edit-inline';
 export default class WorkoutTitle extends Component {
   constructor(props) {
     super(props);
-    let title = this.props.title;
-    this.state = {
-      title: title,
-    };
+    // let title = this.props.title;
+    // this.state = {
+    //   title: title,
+    // };
     this.handleTitleChange = this.handleTitleChange.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.customValidateText = this.customValidateText.bind(this);
   }
 
   handleTitleChange(title) {
-    this.setState({...title});
+    // this.setState({...title});
     this.props.onTitleSubmit(this.props.index, title);
   }
 
@@ -22,15 +23,25 @@ export default class WorkoutTitle extends Component {
     this.props.onDelete(this.props.index);
   }
 
+  customValidateText(text) {
+    return (text.length > 0 && text.length < 64);
+  }
+
   render() {
+    let textInput;
+    if (this.props.title) {
+      textInput = this.props.title;
+    } else {
+      textInput = '';
+    }
     return (
       <div id='WorkoutTitle'>
         <div className='workout-title-text'>
   
           <InlineEdit
-            //validate={this.customValidateText}
+            validate={this.customValidateText}
             activeClassName="editing"
-            text={this.props.title.title}
+            text={textInput}
             paramName="title"
             change={this.handleTitleChange}
             editingElement="input"
@@ -42,7 +53,7 @@ export default class WorkoutTitle extends Component {
               margin: 0,
               padding: 0,
               fontSize: 15,
-              "margin-left": "0.5em",
+              marginLeft: "0.5em",
               //outline: 0,
               //border: 0,
               whiteSpace: "normal"
@@ -53,7 +64,7 @@ export default class WorkoutTitle extends Component {
             <i className="fa fa-times" aria-hidden="true"></i>
           </a>
           
-          <div className="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+          <div className="modal fade" id="myModal" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel">
             <div className="modal-dialog modal-sm" role="document">
               <div className="modal-content">
                 <div className="modal-header">

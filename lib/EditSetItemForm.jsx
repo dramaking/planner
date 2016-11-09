@@ -53,7 +53,7 @@ export default class EditSetItemForm extends Component {
           <div className="col-xs-2 col-xs-offset-4">{this.props.index}</div>
           <div className="col-xs-1 input-wrapper">
             <input type="text" 
-                   className="form-control set-input" 
+                   className="form-control set-input rep-input" 
                    placeholder="Rep"
                    value={this.state.item}
                    onChange={this.handleRepChange}
@@ -62,7 +62,7 @@ export default class EditSetItemForm extends Component {
           <div className="col-xs-1 text-center time-symbol">&times;</div>
           <div className="col-xs-1 input-wrapper">
             <input type="text" 
-                   className="form-control set-input" 
+                   className="form-control set-input kg-input" 
                    placeholder="Kg"
                    value={this.state.item}
                    onChange={this.handleKgChange} 

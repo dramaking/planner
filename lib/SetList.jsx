@@ -10,11 +10,11 @@ export default class SetList extends Component {
 
     const listItems = setList.map((set) =>
       <SetItem key={set.id}
-           index={set.id}
-           rep={set.rep}
-           kg={set.kg}
-           onSubmit={onSubmit}
-           onDelete={onDelete} />
+               index={set.id}
+               rep={set.rep}
+               kg={set.kg}
+               onSubmit={onSubmit}
+               onDelete={onDelete} />
     );
 
     return (

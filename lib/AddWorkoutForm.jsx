@@ -19,9 +19,9 @@ export default class AddWorkoutForm extends Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.onSubmit(this.state.title);
-    this.setState({
-      title: '',
-    });
+    // this.setState({
+    //   title: '',
+    // });
     this.props.onClick();
   }
 

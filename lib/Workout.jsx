@@ -43,11 +43,13 @@ export default class Workout extends Component {
   render() {
 
     const onSubmit = this.props.onSubmit;
+    const onDelete = this.props.onDelete;
 
     return (
       <div id='Workout'>
         <WorkoutTitle title={this.props.title}
                       onTitleSubmit={onSubmit}
+                      onDelete={onDelete}
                       index={this.props.index} />
 
         <ExerciseList exerciseList={this.state.exerciseList} />
