@@ -5,15 +5,17 @@ export default class ExerciseNotes extends Component {
 
   constructor(props) {
     super(props);
-    this.state = {
-      note: 'Click to edit your notes here',
-    };
+    // this.state = {
+    //   note: 'Click to edit your notes here',
+    // };
     this.handleNoteChange = this.handleNoteChange.bind(this);
     this.customValidateText = this.customValidateText.bind(this);
   }
 
   handleNoteChange(note) {
     this.setState({...note});
+    //console.log(note.note);
+    this.props.onNotesChange(this.props.index, note.note);
   }
 
   customValidateText(text) {
@@ -21,6 +23,10 @@ export default class ExerciseNotes extends Component {
   }
 
   render() {
+    // let note = this.state.note;
+    // if (this.props.note !== '') {
+    //   note = this.props.note;
+    // }
     return (
       <div className="ExerciseNotes">
         <div className="row set-space">
@@ -33,7 +39,7 @@ export default class ExerciseNotes extends Component {
             <InlineEdit
               //validate={this.customValidateText}
               activeClassName="editing"
-              text={this.state.note}
+              text={this.props.note}
               paramName="note"
               change={this.handleNoteChange}
               editingElement="textarea"

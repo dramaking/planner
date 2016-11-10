@@ -22,11 +22,12 @@ export default class Exercise extends Component {
       //   // {id: 3, rep: 8, kg: 40},
       //   // {id: 4, rep: 6, kg: 40}
       // ],
-      notes: 'Click to edit your notes here',
+      //notes: 'Click to edit your notes here',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSetEdit = this.handleSetEdit.bind(this);
     this.handleSetDelete = this.handleSetDelete.bind(this);
+    this.handleExerciseFinish = this.handleExerciseFinish.bind(this);
   }
 
   handleSubmit(rep, kg) {
@@ -67,9 +68,21 @@ export default class Exercise extends Component {
     // localStorage.setItem(setListName, JSON.stringify(setList));
   }
 
+  handleExerciseFinish(e) {
+    if (this.state.setList.length !== 0) {
+      e.preventDefault();
+      this.props.onExerciseFinish(this.props.index, this.state.setList);
+      this.setState({
+        setList: []
+      });
+    }
+    
+  }
+
   render() {
-    const targetId = "#myModal" + this.props.index.toString();
-    const target = "myModal" + this.props.index.toString();
+    const targetId = "#myModal" + this.props.workoutIndex.toString() + this.props.index.toString();
+    const target = "myModal" + this.props.workoutIndex.toString() + this.props.index.toString();
+    const onNotesChange = this.props.onNotesChange;
 
     return (
       <div className='exercise'>
@@ -95,7 +108,9 @@ export default class Exercise extends Component {
                 </div>
 
                 <div className="modal-body">
-                  <ExerciseNotes />
+                  <ExerciseNotes onNotesChange={onNotesChange}
+                                 index={this.props.index}
+                                 note={this.props.notes} />
 
                   <div className="row exercise-history set-space">
                     <div className="col-xs-2 small-title">History</div>
@@ -104,7 +119,7 @@ export default class Exercise extends Component {
                     <div className="col-xs-1 col-xs-offset-1">Kg</div>
                   </div>
 
-                  <ExerciseHistory setList={this.state.setList} />
+                  <ExerciseHistory setList={this.props.exerciseHistory} />
 
                   <hr />
                   <div className="row exercise-record set-space">
@@ -124,7 +139,7 @@ export default class Exercise extends Component {
 
                 <div className="modal-footer">
                   <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" className="btn btn-primary" data-dismiss="modal">Finish Workout</button>
+                  <button type="button" className="btn btn-primary" onClick={this.handleExerciseFinish}>Finish Exercise</button>
                 </div>
               </div>
             </div>

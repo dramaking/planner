@@ -1,195 +1,24 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node',
-1 verbose cli   '/usr/local/bin/npm',
-1 verbose cli   'install',
-1 verbose cli   '--save-dev',
-1 verbose cli   'marklundin/react-localstorage-hoc' ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'dev/hot' ]
 2 info using npm@3.10.3
 3 info using node@v6.5.0
-4 silly loadCurrentTree Starting
-5 silly install loadCurrentTree
-6 silly install readLocalPackageData
-7 silly fetchPackageMetaData marklundin/react-localstorage-hoc
-8 silly fetchOtherPackageData marklundin/react-localstorage-hoc
-9 silly cache add args [ 'marklundin/react-localstorage-hoc', null ]
-10 verbose cache add spec marklundin/react-localstorage-hoc
-11 silly cache add parsed spec Result {
-11 silly cache add   raw: 'marklundin/react-localstorage-hoc',
-11 silly cache add   scope: null,
-11 silly cache add   escapedName: null,
-11 silly cache add   name: null,
-11 silly cache add   rawSpec: 'marklundin/react-localstorage-hoc',
-11 silly cache add   spec: 'github:marklundin/react-localstorage-hoc',
-11 silly cache add   type: 'hosted',
-11 silly cache add   hosted:
-11 silly cache add    { type: 'github',
-11 silly cache add      ssh: 'git@github.com:marklundin/react-localstorage-hoc.git',
-11 silly cache add      sshUrl: 'git+ssh://git@github.com/marklundin/react-localstorage-hoc.git',
-11 silly cache add      httpsUrl: 'git+https://github.com/marklundin/react-localstorage-hoc.git',
-11 silly cache add      gitUrl: 'git://github.com/marklundin/react-localstorage-hoc.git',
-11 silly cache add      shortcut: 'github:marklundin/react-localstorage-hoc',
-11 silly cache add      directUrl: 'https://raw.githubusercontent.com/marklundin/react-localstorage-hoc/master/package.json' } }
-12 verbose addRemoteGit caching marklundin/react-localstorage-hoc
-13 verbose addRemoteGit marklundin/react-localstorage-hoc is a repository hosted by github
-14 silly tryGitProto attempting to clone git://github.com/marklundin/react-localstorage-hoc.git
-15 silly tryClone cloning marklundin/react-localstorage-hoc via git://github.com/marklundin/react-localstorage-hoc.git
-16 verbose tryClone git-github-com-marklundin-react-localstorage-hoc-git-75475c20 not in flight; caching
-17 verbose correctMkdir /Users/Edgardo/.npm/_git-remotes correctMkdir not in flight; initializing
-18 verbose makeDirectory /Users/Edgardo/.npm/_git-remotes creation not in flight; initializing
-19 silly makeDirectory /Users/Edgardo/.npm/_git-remotes uid: 501 gid: 20
-20 info git [ 'clone',
-20 info git   '--template=/Users/Edgardo/.npm/_git-remotes/_templates',
-20 info git   '--mirror',
-20 info git   'git://github.com/marklundin/react-localstorage-hoc.git',
-20 info git   '/Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-75475c20' ]
-21 verbose mirrorRemote marklundin/react-localstorage-hoc git clone git://github.com/marklundin/react-localstorage-hoc.git
-22 verbose correctMkdir /Users/Edgardo/.npm/_git-remotes correctMkdir not in flight; initializing
-23 verbose setPermissions marklundin/react-localstorage-hoc set permissions on /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-75475c20
-24 verbose resolveHead marklundin/react-localstorage-hoc original treeish: master
-25 info git [ 'rev-list', '-n1', 'master' ]
-26 silly resolveHead marklundin/react-localstorage-hoc resolved treeish: d49f2aed97f0a8fe8323d7df51047ff1e901aa0d
-27 verbose resolveHead marklundin/react-localstorage-hoc resolved Git URL: git://github.com/marklundin/react-localstorage-hoc.git#d49f2aed97f0a8fe8323d7df51047ff1e901aa0d
-28 silly resolveHead Git working directory: /var/folders/fd/g4pshks17sx2258sk_cnnzvh0000gn/T/npm-44208-8acea5c3/git-cache-bd6a2ce8/d49f2aed97f0a8fe8323d7df51047ff1e901aa0d
-29 info git [ 'clone',
-29 info git   '/Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-75475c20',
-29 info git   '/var/folders/fd/g4pshks17sx2258sk_cnnzvh0000gn/T/npm-44208-8acea5c3/git-cache-bd6a2ce8/d49f2aed97f0a8fe8323d7df51047ff1e901aa0d' ]
-30 verbose cloneResolved marklundin/react-localstorage-hoc clone Cloning into '/var/folders/fd/g4pshks17sx2258sk_cnnzvh0000gn/T/npm-44208-8acea5c3/git-cache-bd6a2ce8/d49f2aed97f0a8fe8323d7df51047ff1e901aa0d'...
-30 verbose cloneResolved done.
-31 info git [ 'checkout', 'd49f2aed97f0a8fe8323d7df51047ff1e901aa0d' ]
-32 verbose checkoutTreeish marklundin/react-localstorage-hoc checkout Note: checking out 'd49f2aed97f0a8fe8323d7df51047ff1e901aa0d'.
-32 verbose checkoutTreeish
-32 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
-32 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
-32 verbose checkoutTreeish state without impacting any branches by performing another checkout.
-32 verbose checkoutTreeish
-32 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
-32 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
-32 verbose checkoutTreeish
-32 verbose checkoutTreeish   git checkout -b <new-branch-name>
-32 verbose checkoutTreeish
-32 verbose checkoutTreeish HEAD is now at d49f2ae... Update index.js
-33 info git [ 'submodule', '-q', 'update', '--init', '--recursive' ]
-34 verbose updateSubmodules marklundin/react-localstorage-hoc submodule update
-35 error addLocal Could not install /var/folders/fd/g4pshks17sx2258sk_cnnzvh0000gn/T/npm-44208-8acea5c3/git-cache-bd6a2ce8/d49f2aed97f0a8fe8323d7df51047ff1e901aa0d
-36 silly tryHTTPS attempting to clone git+https://github.com/marklundin/react-localstorage-hoc.git
-37 silly tryClone cloning marklundin/react-localstorage-hoc via git+https://github.com/marklundin/react-localstorage-hoc.git
-38 verbose tryClone git-https-github-com-marklundin-react-localstorage-hoc-git-d15df72a not in flight; caching
-39 verbose correctMkdir /Users/Edgardo/.npm/_git-remotes correctMkdir not in flight; initializing
-40 info git [ 'clone',
-40 info git   '--template=/Users/Edgardo/.npm/_git-remotes/_templates',
-40 info git   '--mirror',
-40 info git   'https://github.com/marklundin/react-localstorage-hoc.git',
-40 info git   '/Users/Edgardo/.npm/_git-remotes/git-https-github-com-marklundin-react-localstorage-hoc-git-d15df72a' ]
-41 verbose mirrorRemote marklundin/react-localstorage-hoc git clone https://github.com/marklundin/react-localstorage-hoc.git
-42 verbose correctMkdir /Users/Edgardo/.npm/_git-remotes correctMkdir not in flight; initializing
-43 verbose setPermissions marklundin/react-localstorage-hoc set permissions on /Users/Edgardo/.npm/_git-remotes/git-https-github-com-marklundin-react-localstorage-hoc-git-d15df72a
-44 verbose resolveHead marklundin/react-localstorage-hoc original treeish: master
-45 info git [ 'rev-list', '-n1', 'master' ]
-46 silly resolveHead marklundin/react-localstorage-hoc resolved treeish: d49f2aed97f0a8fe8323d7df51047ff1e901aa0d
-47 verbose resolveHead marklundin/react-localstorage-hoc resolved Git URL: git+https://github.com/marklundin/react-localstorage-hoc.git#d49f2aed97f0a8fe8323d7df51047ff1e901aa0d
-48 silly resolveHead Git working directory: /var/folders/fd/g4pshks17sx2258sk_cnnzvh0000gn/T/npm-44208-8acea5c3/git-cache-76f8898b/d49f2aed97f0a8fe8323d7df51047ff1e901aa0d
-49 info git [ 'clone',
-49 info git   '/Users/Edgardo/.npm/_git-remotes/git-https-github-com-marklundin-react-localstorage-hoc-git-d15df72a',
-49 info git   '/var/folders/fd/g4pshks17sx2258sk_cnnzvh0000gn/T/npm-44208-8acea5c3/git-cache-76f8898b/d49f2aed97f0a8fe8323d7df51047ff1e901aa0d' ]
-50 verbose cloneResolved marklundin/react-localstorage-hoc clone Cloning into '/var/folders/fd/g4pshks17sx2258sk_cnnzvh0000gn/T/npm-44208-8acea5c3/git-cache-76f8898b/d49f2aed97f0a8fe8323d7df51047ff1e901aa0d'...
-50 verbose cloneResolved done.
-51 info git [ 'checkout', 'd49f2aed97f0a8fe8323d7df51047ff1e901aa0d' ]
-52 verbose checkoutTreeish marklundin/react-localstorage-hoc checkout Note: checking out 'd49f2aed97f0a8fe8323d7df51047ff1e901aa0d'.
-52 verbose checkoutTreeish
-52 verbose checkoutTreeish You are in 'detached HEAD' state. You can look around, make experimental
-52 verbose checkoutTreeish changes and commit them, and you can discard any commits you make in this
-52 verbose checkoutTreeish state without impacting any branches by performing another checkout.
-52 verbose checkoutTreeish
-52 verbose checkoutTreeish If you want to create a new branch to retain commits you create, you may
-52 verbose checkoutTreeish do so (now or later) by using -b with the checkout command again. Example:
-52 verbose checkoutTreeish
-52 verbose checkoutTreeish   git checkout -b <new-branch-name>
-52 verbose checkoutTreeish
-52 verbose checkoutTreeish HEAD is now at d49f2ae... Update index.js
-53 info git [ 'submodule', '-q', 'update', '--init', '--recursive' ]
-54 verbose updateSubmodules marklundin/react-localstorage-hoc submodule update
-55 error addLocal Could not install /var/folders/fd/g4pshks17sx2258sk_cnnzvh0000gn/T/npm-44208-8acea5c3/git-cache-76f8898b/d49f2aed97f0a8fe8323d7df51047ff1e901aa0d
-56 silly trySSH attempting to clone git@github.com:marklundin/react-localstorage-hoc.git
-57 silly tryClone cloning marklundin/react-localstorage-hoc via git@github.com:marklundin/react-localstorage-hoc.git
-58 verbose tryClone git-github-com-marklundin-react-localstorage-hoc-git-81721532 not in flight; caching
-59 verbose correctMkdir /Users/Edgardo/.npm/_git-remotes correctMkdir not in flight; initializing
-60 info git [ 'clone',
-60 info git   '--template=/Users/Edgardo/.npm/_git-remotes/_templates',
-60 info git   '--mirror',
-60 info git   'git@github.com:marklundin/react-localstorage-hoc.git',
-60 info git   '/Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532' ]
-61 error git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532: Cloning into bare repository '/Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532'...
-61 error git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532: Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
-61 error git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532: Permission denied (publickey).
-61 error git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532: fatal: Could not read from remote repository.
-61 error git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532:
-61 error git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532: Please make sure you have the correct access rights
-61 error git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532: and the repository exists.
-62 silly fetchPackageMetaData Error: Command failed: git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532
-62 silly fetchPackageMetaData Cloning into bare repository '/Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532'...
-62 silly fetchPackageMetaData Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
-62 silly fetchPackageMetaData Permission denied (publickey).
-62 silly fetchPackageMetaData fatal: Could not read from remote repository.
-62 silly fetchPackageMetaData
-62 silly fetchPackageMetaData Please make sure you have the correct access rights
-62 silly fetchPackageMetaData and the repository exists.
-62 silly fetchPackageMetaData
-62 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:206:12)
-62 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
-62 silly fetchPackageMetaData     at ChildProcess.emit (events.js:191:7)
-62 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:877:16)
-62 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
-62 silly fetchPackageMetaData  error for marklundin/react-localstorage-hoc { Error: Command failed: git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532
-62 silly fetchPackageMetaData Cloning into bare repository '/Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532'...
-62 silly fetchPackageMetaData Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
-62 silly fetchPackageMetaData Permission denied (publickey).
-62 silly fetchPackageMetaData fatal: Could not read from remote repository.
-62 silly fetchPackageMetaData
-62 silly fetchPackageMetaData Please make sure you have the correct access rights
-62 silly fetchPackageMetaData and the repository exists.
-62 silly fetchPackageMetaData
-62 silly fetchPackageMetaData     at ChildProcess.exithandler (child_process.js:206:12)
-62 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
-62 silly fetchPackageMetaData     at ChildProcess.emit (events.js:191:7)
-62 silly fetchPackageMetaData     at maybeClose (internal/child_process.js:877:16)
-62 silly fetchPackageMetaData     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
-62 silly fetchPackageMetaData   killed: false,
-62 silly fetchPackageMetaData   code: 128,
-62 silly fetchPackageMetaData   signal: null,
-62 silly fetchPackageMetaData   cmd: 'git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532' }
-63 silly rollbackFailedOptional Starting
-64 silly rollbackFailedOptional Finishing
-65 silly runTopLevelLifecycles Starting
-66 silly runTopLevelLifecycles Finishing
-67 silly install printInstalled
-68 verbose stack Error: Command failed: git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532
-68 verbose stack Cloning into bare repository '/Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532'...
-68 verbose stack Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
-68 verbose stack Permission denied (publickey).
-68 verbose stack fatal: Could not read from remote repository.
-68 verbose stack
-68 verbose stack Please make sure you have the correct access rights
-68 verbose stack and the repository exists.
-68 verbose stack
-68 verbose stack     at ChildProcess.exithandler (child_process.js:206:12)
-68 verbose stack     at emitTwo (events.js:106:13)
-68 verbose stack     at ChildProcess.emit (events.js:191:7)
-68 verbose stack     at maybeClose (internal/child_process.js:877:16)
-68 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:226:5)
-69 verbose cwd /Users/Edgardo/GitHub/planner
-70 error Darwin 16.1.0
-71 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--save-dev" "marklundin/react-localstorage-hoc"
-72 error node v6.5.0
-73 error npm  v3.10.3
-74 error code 128
-75 error Command failed: git clone --template=/Users/Edgardo/.npm/_git-remotes/_templates --mirror git@github.com:marklundin/react-localstorage-hoc.git /Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532
-75 error Cloning into bare repository '/Users/Edgardo/.npm/_git-remotes/git-github-com-marklundin-react-localstorage-hoc-git-81721532'...
-75 error Warning: Permanently added the RSA host key for IP address '192.30.253.112' to the list of known hosts.
-75 error Permission denied (publickey).
-75 error fatal: Could not read from remote repository.
-75 error
-75 error Please make sure you have the correct access rights
-75 error and the repository exists.
-76 error If you need help, you may report this error at:
-76 error     <https://github.com/npm/npm/issues>
-77 verbose exit [ 1, true ]
+4 verbose stack Error: missing script: dev/hot
+4 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:151:19)
+4 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:61:5
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:356:5
+4 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:320:45)
+4 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:354:3)
+4 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:124:5)
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:311:12
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:78:16
+4 verbose stack     at tryToString (fs.js:455:3)
+4 verbose stack     at FSReqWrap.readFileAfterClose [as oncomplete] (fs.js:442:12)
+5 verbose cwd /Users/Edgardo/GitHub/planner
+6 error Darwin 16.1.0
+7 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "dev/hot"
+8 error node v6.5.0
+9 error npm  v3.10.3
+10 error missing script: dev/hot
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
