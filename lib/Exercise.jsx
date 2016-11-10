@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import SetList from './SetList';
 import AddSet from './AddSet';
 import ExerciseNotes from './ExerciseNotes';
+import ExerciseHistory from './ExerciseHistory';
 
 export default class Exercise extends Component {
   constructor(props) {
@@ -102,12 +103,9 @@ export default class Exercise extends Component {
                     <div className="col-xs-1">Rep</div>
                     <div className="col-xs-1 col-xs-offset-1">Kg</div>
                   </div>
-                  <div className="row set-space">
-                    <div className="col-xs-2 col-xs-offset-4">1</div>
-                    <div className="col-xs-1">10</div>
-                    <div className="col-xs-1 text-center">&times;</div>
-                    <div className="col-xs-1">30</div>
-                  </div>
+
+                  <ExerciseHistory setList={this.state.setList} />
+
                   <hr />
                   <div className="row exercise-record set-space">
                     <div className="col-xs-2 small-title">Today</div>
@@ -126,6 +124,7 @@ export default class Exercise extends Component {
 
                 <div className="modal-footer">
                   <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" className="btn btn-primary" data-dismiss="modal">Finish Workout</button>
                 </div>
               </div>
             </div>

@@ -7,12 +7,12 @@ import AddExercise from './AddExercise';
 export default class Workout extends Component {
   constructor(props) {
     super(props);
-    const exerciseListName = "exerciseList" + this.props.index;
-    console.log(exerciseListName);
+    // const exerciseListName = "exerciseList" + this.props.index;
+    // console.log(exerciseListName);
     let exerciseList = [];
-    if (localStorage.getItem(exerciseListName)) {
-      exerciseList = JSON.parse(localStorage.getItem(exerciseListName));
-    }
+    // if (localStorage.getItem(exerciseListName)) {
+    //   exerciseList = JSON.parse(localStorage.getItem(exerciseListName));
+    // }
     this.state = {
       exerciseList: exerciseList,
       // exerciseList: [
@@ -30,12 +30,15 @@ export default class Workout extends Component {
   addNewExercise() {
     const exerciseList = this.state.exerciseList.slice();
     const index = exerciseList.length + 1;
-    exerciseList.push({id: index, title: this.state.newTitle, set: this.state.newSet});
+    exerciseList.push({id: index, 
+                       title: this.state.newTitle, 
+                       set: this.state.newSet,
+                       setListHistory: [] });
     this.setState({exerciseList: exerciseList});
 
-    const exerciseListName = "exerciseList" + this.props.index;
-    console.log(exerciseListName);
-    localStorage.setItem(exerciseListName, JSON.stringify(exerciseList));
+    // const exerciseListName = "exerciseList" + this.props.index;
+    // console.log(exerciseListName);
+    // localStorage.setItem(exerciseListName, JSON.stringify(exerciseList));
   }
 
   handleTitleChange(title) {
