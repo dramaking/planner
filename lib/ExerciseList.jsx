@@ -10,7 +10,8 @@ export default class ExerciseList extends Component {
       <Exercise key={exercise.id} 
                 title={exercise.title} 
                 set={exercise.set}
-                index={exercise.id} />
+                index={exercise.id}
+                workoutIndex={this.props.index} />
     );
 
     return (

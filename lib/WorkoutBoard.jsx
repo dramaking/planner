@@ -9,9 +9,9 @@ export default class WorkoutBoard extends Component {
   constructor(props) {
     super(props);
     let workoutList = [];
-    // if (localStorage.workoutList) {
-    //   workoutList = JSON.parse(localStorage.workoutList);
-    // }
+    if (localStorage.workoutList) {
+      workoutList = JSON.parse(localStorage.workoutList);
+    }
     this.state = {
       workoutList: workoutList
       // workoutList: [
@@ -30,7 +30,7 @@ export default class WorkoutBoard extends Component {
     workoutList.push({id: index, title: title});
     this.setState({workoutList: workoutList});
 
-    //localStorage.workoutList = JSON.stringify(workoutList);
+    localStorage.workoutList = JSON.stringify(workoutList);
   }
 
   handleTitleChange(index, title) {
@@ -39,7 +39,7 @@ export default class WorkoutBoard extends Component {
     workoutList[index - 1] = workout;
     this.setState({workoutList: workoutList});
 
-    //localStorage.workoutList = JSON.stringify(workoutList);
+    localStorage.workoutList = JSON.stringify(workoutList);
   }
 
   handleWorkoutDelete(index) {
@@ -53,7 +53,7 @@ export default class WorkoutBoard extends Component {
     }
     this.setState({workoutList: workoutList});
 
-    //localStorage.workoutList = JSON.stringify(workoutList);
+    localStorage.workoutList = JSON.stringify(workoutList);
   }
 
   render() {

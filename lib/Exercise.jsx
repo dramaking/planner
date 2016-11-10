@@ -7,13 +7,20 @@ import ExerciseNotes from './ExerciseNotes';
 export default class Exercise extends Component {
   constructor(props) {
     super(props);
+    // const setListName = this.props.title;
+    // console.log(setListName);
+    let setList = [];
+    // if (localStorage.getItem(setListName)) {
+    //   setList = JSON.parse(localStorage.getItem(setListName));
+    // }
     this.state = {
-      setList: [
-        // {id: 1, rep: 12, kg: 30},
-        // {id: 2, rep: 10, kg: 30},
-        // {id: 3, rep: 8, kg: 40},
-        // {id: 4, rep: 6, kg: 40}
-      ],
+      setList: setList,
+      // setList: [
+      //   // {id: 1, rep: 12, kg: 30},
+      //   // {id: 2, rep: 10, kg: 30},
+      //   // {id: 3, rep: 8, kg: 40},
+      //   // {id: 4, rep: 6, kg: 40}
+      // ],
       notes: 'Click to edit your notes here',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -26,6 +33,10 @@ export default class Exercise extends Component {
     const index = setList.length + 1;
     setList.push({id: index, rep: rep, kg: kg});
     this.setState({setList: setList});
+
+    // const setListName = this.props.title;
+    // console.log(setListName);
+    // localStorage.setItem(setListName, JSON.stringify(setList));
   }
 
   handleSetEdit(index, rep, kg) {
@@ -33,6 +44,10 @@ export default class Exercise extends Component {
     const setItem = {id: index, rep: rep, kg: kg};
     setList[index - 1] = setItem;
     this.setState({setList: setList});
+
+    // const setListName = this.props.title;
+    // console.log(setListName);
+    // localStorage.setItem(setListName, JSON.stringify(setList));
   }
 
   handleSetDelete(index) {
@@ -45,6 +60,10 @@ export default class Exercise extends Component {
       count++;
     }
     this.setState({setList: setList});
+
+    // const setListName = this.props.title;
+    // console.log(setListName);
+    // localStorage.setItem(setListName, JSON.stringify(setList));
   }
 
   render() {

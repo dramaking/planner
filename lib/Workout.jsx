@@ -7,11 +7,18 @@ import AddExercise from './AddExercise';
 export default class Workout extends Component {
   constructor(props) {
     super(props);
+    const exerciseListName = "exerciseList" + this.props.index;
+    console.log(exerciseListName);
+    let exerciseList = [];
+    if (localStorage.getItem(exerciseListName)) {
+      exerciseList = JSON.parse(localStorage.getItem(exerciseListName));
+    }
     this.state = {
-      exerciseList: [
-        // {id: 1, title: 'Barbell Incline Bench Press', set: 5},
-        // {id: 2, title: 'Barbell Flat Bench Press', set: 4}
-      ],
+      exerciseList: exerciseList,
+      // exerciseList: [
+      //   // {id: 1, title: 'Barbell Incline Bench Press', set: 5},
+      //   // {id: 2, title: 'Barbell Flat Bench Press', set: 4}
+      // ],
       newTitle: '',
       newSet: null,
     };
@@ -25,6 +32,10 @@ export default class Workout extends Component {
     const index = exerciseList.length + 1;
     exerciseList.push({id: index, title: this.state.newTitle, set: this.state.newSet});
     this.setState({exerciseList: exerciseList});
+
+    const exerciseListName = "exerciseList" + this.props.index;
+    console.log(exerciseListName);
+    localStorage.setItem(exerciseListName, JSON.stringify(exerciseList));
   }
 
   handleTitleChange(title) {
@@ -52,7 +63,8 @@ export default class Workout extends Component {
                       onDelete={onDelete}
                       index={this.props.index} />
 
-        <ExerciseList exerciseList={this.state.exerciseList} />
+        <ExerciseList exerciseList={this.state.exerciseList}
+                      index={this.props.index} />
 
         <AddExercise title={this.state.newTitle}
                      set={this.state.newSet}
