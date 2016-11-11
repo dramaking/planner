@@ -77,6 +77,9 @@ export default class Workout extends Component {
       count++;
     }
     this.setState({exerciseList: exerciseList});
+
+    const exerciseListName = "exerciseList" + this.props.index;
+    localStorage.setItem(exerciseListName, JSON.stringify(exerciseList));
   }
 
   handleExerciseFinish(index, setList) {

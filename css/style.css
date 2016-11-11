@@ -121,6 +121,15 @@ html, body, #main-container, #App {
   margin-top: 3px;
 }
 
+/* WorkoutTitleText */
+.workout-title-text .close-icon {
+  display: none;
+}
+
+.workout-title-text:hover .close-icon {
+  display: inline;
+}
+
 /* Exercise */
 .exercise-container {
   background-color: #fff;
@@ -138,6 +147,7 @@ html, body, #main-container, #App {
   display: block;
   color: #333;
   cursor: pointer;
+  /*position: relative;*/
 }
 
 .exercise-details:hover,
@@ -149,6 +159,22 @@ html, body, #main-container, #App {
 .exercise-title {
   margin-bottom: 10px;
 }
+
+.title-icon-trash {
+  /*position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 10;*/
+  color: #c9302c;
+}
+
+/*.exercise-details .title-icon-trash {
+  display: none;
+}
+
+.exercise-details:hover .title-icon-trash {
+  display: inline;
+}*/
 
 .modal p {
   white-space: normal;
@@ -174,10 +200,6 @@ html, body, #main-container, #App {
 .title-icon-pencil {
   margin: 0 1em 0 2em;
   color: #337ab7;
-}
-
-.title-icon-trash {
-  color: #c9302c;
 }
 
 .title-icon {

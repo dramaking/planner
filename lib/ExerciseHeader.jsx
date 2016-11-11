@@ -25,7 +25,7 @@ export default class ExerciseHeader extends Component {
 
   handleDelete(e) {
     e.preventDefault();
-    this.props.onExerciseChange(this.props.index);
+    this.props.onExerciseDelete(this.props.index);
     
   }
 
@@ -43,7 +43,7 @@ export default class ExerciseHeader extends Component {
           </button>
           <h4 className="modal-title exercise-modal-title" id="myModalLabel">{this.props.title} - {this.props.set} Sets</h4>
           <span className="glyphicon glyphicon-pencil title-icon title-icon-pencil" aria-hidden="true" onClick={this.handleTextClick}></span>
-          <span className="glyphicon glyphicon-trash title-icon title-icon-trash" aria-hidden="true" onClick={this.handleDelete}></span>
+          <span className="glyphicon glyphicon-trash title-icon title-icon-trash" aria-hidden="true" data-dismiss="modal" onClick={this.handleDelete}></span>
         </div>
       );
     } else {

@@ -58,7 +58,6 @@ export default class Exercise extends Component {
         setList: []
       });
     }
-    
   }
 
   render() {
@@ -77,7 +76,7 @@ export default class Exercise extends Component {
               <p>{this.props.title}</p>
             </div>
             <div className="exercise-set">
-              <p>{this.props.set} <small>Set</small></p>
+              <p>{this.props.set} <small>Sets</small></p>
             </div>
           </a>
 
