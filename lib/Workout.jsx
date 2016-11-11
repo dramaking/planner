@@ -26,6 +26,8 @@ export default class Workout extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleExerciseFinish = this.handleExerciseFinish.bind(this);
     this.handleNotesChange = this.handleNotesChange.bind(this);
+    this.handleExerciseChange = this.handleExerciseChange.bind(this);
+    this.handleExerciseDelete = this.handleExerciseDelete.bind(this);
   }
 
   addNewExercise() {
@@ -53,6 +55,28 @@ export default class Workout extends Component {
   handleSubmit() {
     this.addNewExercise();
     this.setState({newTitle: '', newSet: null,});
+  }
+
+  handleExerciseChange(index, title, set) {
+    const exerciseList = this.state.exerciseList.slice();
+    exerciseList[index - 1].title = title;
+    exerciseList[index - 1].set = set;
+    this.setState({exerciseList: exerciseList});
+
+    const exerciseListName = "exerciseList" + this.props.index;
+    localStorage.setItem(exerciseListName, JSON.stringify(exerciseList));
+  }
+
+  handleExerciseDelete(index) {
+    const exerciseList = this.state.exerciseList.slice();
+    exerciseList.splice(index - 1, 1);
+    let exerciseItem;
+    let count = 1;
+    for (exerciseItem of exerciseList) {
+      exerciseItem.id = count;
+      count++;
+    }
+    this.setState({exerciseList: exerciseList});
   }
 
   handleExerciseFinish(index, setList) {
@@ -88,7 +112,9 @@ export default class Workout extends Component {
         <ExerciseList exerciseList={this.state.exerciseList}
                       index={this.props.index}
                       onExerciseFinish={this.handleExerciseFinish}
-                      onNotesChange = {this.handleNotesChange} />
+                      onNotesChange = {this.handleNotesChange}
+                      onExerciseChange={this.handleExerciseChange}
+                      onExerciseDelete={this.handleExerciseDelete} />
 
         <AddExercise title={this.state.newTitle}
                      set={this.state.newSet}

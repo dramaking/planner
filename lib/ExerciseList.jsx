@@ -7,6 +7,8 @@ export default class ExerciseList extends Component {
     const exerciseList = this.props.exerciseList;
     const onExerciseFinish = this.props.onExerciseFinish;
     const onNotesChange = this.props.onNotesChange;
+    const onExerciseChange = this.props.onExerciseChange;
+    const onExerciseDelete = this.props.onExerciseDelete;
 
     const listItems = exerciseList.map((exercise) => 
       <Exercise key={exercise.id} 
@@ -16,6 +18,8 @@ export default class ExerciseList extends Component {
                 workoutIndex={this.props.index}
                 onExerciseFinish={onExerciseFinish}
                 onNotesChange={onNotesChange}
+                onExerciseChange={onExerciseChange}
+                onExerciseDelete={onExerciseDelete}
                 exerciseHistory={exercise.exerciseHistory}
                 notes={exercise.notes} />
     );

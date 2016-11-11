@@ -125,7 +125,7 @@ html, body, #main-container, #App {
 .exercise-container {
   background-color: #fff;
   border-radius: 3px;
-  padding: 6px 6px 1px 6px;
+  padding: 6px 6px 1px 10px;
   margin-bottom: 0.5em;
   transition: 0.3s;
 }
@@ -146,6 +146,10 @@ html, body, #main-container, #App {
   color: #333;
 }
 
+.exercise-title {
+  margin-bottom: 10px;
+}
+
 .modal p {
   white-space: normal;
 }
@@ -161,6 +165,31 @@ html, body, #main-container, #App {
 .small-title {
   font-weight: 700;
   font-size: 1.1em;
+}
+
+.exercise-modal-title {
+  display: inline-block;
+}
+
+.title-icon-pencil {
+  margin: 0 1em 0 2em;
+  color: #337ab7;
+}
+
+.title-icon-trash {
+  color: #c9302c;
+}
+
+.title-icon {
+  cursor: pointer;
+}
+
+.modal-header .title-icon {
+  display: none;
+}
+
+.modal-header:hover .title-icon {
+  display: inline;
 }
 
 /* AddExercise */
@@ -378,6 +407,10 @@ html, body, #main-container, #App {
   padding: 5px 10px;
 }
 
+/* ExerciseHeaderForm */
+.form-inline .form-shorter {
+  width: 5em;
+}
 
 
 
