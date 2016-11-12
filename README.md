@@ -1,5 +1,5 @@
-# react-testing-components-enzyme
-Sample repo for a blog post on testing react components with enzyme
+# Workout Planner
+Your personal workout dairy
 
 ## installation
 `npm i`

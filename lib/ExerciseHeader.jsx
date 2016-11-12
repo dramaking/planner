@@ -2,10 +2,6 @@ import React, {Component} from 'react';
 
 import ExerciseHeaderForm from './ExerciseHeaderForm';
 
-function ExerciseHeaderText(props) {
-
-}
-
 export default class ExerciseHeader extends Component {
   constructor(props) {
     super(props);
