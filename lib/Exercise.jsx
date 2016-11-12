@@ -125,7 +125,7 @@ export default class Exercise extends Component {
 
                 <div className="modal-footer">
                   <button type="button" className="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="button" className="btn btn-primary" onClick={this.handleExerciseFinish}>Finish Exercise</button>
+                  <button type="button" className="btn btn-primary exercise-finish" onClick={this.handleExerciseFinish}>Finish Exercise</button>
                 </div>
               </div>
             </div>

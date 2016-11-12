@@ -2,10 +2,10 @@ import React from 'react';
 import { mount, shallow } from 'enzyme';
 import {expect} from 'chai';
 
-import Exercise from '../lib/Exercise';
+//import Exercise from '../lib/Exercise';
 import SetList from '../lib/SetList';
 import SetItem from '../lib/SetItem';
-import EditSetItemForm from '../lib/EditSetItemForm';
+//import EditSetItemForm from '../lib/EditSetItemForm';
 
 describe('<SetList/>', () => {
 

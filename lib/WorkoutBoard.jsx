@@ -3,7 +3,6 @@ import LocalStorageMixin from 'react-localstorage';
 
 import WorkoutList from './WorkoutList';
 import AddWorkout from './AddWorkout';
-import {localState, saveState} from './localStorage';
 
 export default class WorkoutBoard extends Component {
   constructor(props) {
