@@ -1,5 +1,5 @@
 # Workout Planner
-Your personal workout dairy
+Your personal workout journal
 
 ## installation
 `npm i`
