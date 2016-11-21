@@ -13,9 +13,13 @@ function WorkoutHeaderText(props) {
 export default class WorkoutHeader extends Component {
   constructor(props) {
     super(props);
+    let workoutTitle = 'Click to name your workout plan';
+    if (localStorage.workoutTitle) {
+      workoutTitle = JSON.parse(localStorage.workoutTitle);
+    }
     this.state = {
       showForm: false,
-      title: 'Click to name your workout plan',
+      title: workoutTitle,
     };
     this.handleTextClick = this.handleTextClick.bind(this);
     this.handleFormClick = this.handleFormClick.bind(this);
@@ -31,6 +35,8 @@ export default class WorkoutHeader extends Component {
 
   handleTitleChange = (title) => {
     this.setState({title: title});
+
+    localStorage.workoutTitle = JSON.stringify(title);
   }
 
   render() {

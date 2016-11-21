@@ -9,7 +9,7 @@ import WorkoutHeaderForm from '../lib/WorkoutHeaderForm';
 describe('<WorkoutHeader/>', () => {
 
   it('should have an initial showForm state', () => {
-    const wrapper = mount(<WorkoutHeader/>);
+    const wrapper = shallow(<WorkoutHeader/>);
     expect(wrapper.state().showForm).to.equal(false);
   });
 
@@ -62,6 +62,4 @@ describe('<WorkoutHeader/>', () => {
     expect(wrapper.state().title).to.equal('Zicheng\'s Workout Plan');
   });
 
-  
-  
 });
