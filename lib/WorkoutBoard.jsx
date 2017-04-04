@@ -13,10 +13,6 @@ export default class WorkoutBoard extends Component {
     }
     this.state = {
       workoutList: workoutList
-      // workoutList: [
-      //   // {id: 1, title: 'Chest & Triceps'},
-      //   // {id: 2, title: 'Back & Biceps'}
-      // ]
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleTitleChange = this.handleTitleChange.bind(this);
@@ -28,6 +24,7 @@ export default class WorkoutBoard extends Component {
     const index = workoutList.length + 1;
     workoutList.push({id: index, title: title});
     this.setState({workoutList: workoutList});
+    console.log(workoutList);
 
     localStorage.workoutList = JSON.stringify(workoutList);
   }

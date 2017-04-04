@@ -11,12 +11,7 @@ export default class Exercise extends Component {
     super(props);
     this.state = {
       setList: [
-        // {id: 1, rep: 12, kg: 30},
-        // {id: 2, rep: 10, kg: 30},
-        // {id: 3, rep: 8, kg: 40},
-        // {id: 4, rep: 6, kg: 40}
       ],
-      //notes: 'Click to edit your notes here',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleSetEdit = this.handleSetEdit.bind(this);
